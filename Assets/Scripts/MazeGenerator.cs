@@ -17,8 +17,8 @@ public class MazeGenerator : MonoBehaviour
     Dictionary<Vector2, int> cell_walls = new Dictionary<Vector2, int>();
 
     float tile_size = 10;
-    int width = 10;   // Width of map  
-    int height = 10;  // Height of map
+    public int width = 10;   // Width of map  
+    public int height = 10;  // Height of map
 
     List<List<int>> map = new List<List<int>>();
 
@@ -111,8 +111,6 @@ public class MazeGenerator : MonoBehaviour
 
                 tile.transform.Translate(new Vector3 (j*tile_size, 0, i * tile_size));
                 tile.name += " " + i.ToString() + ' ' + j.ToString(); 
-                //float waitFrames = Time.deltaTime * 2;
-                //yield return new WaitForSeconds(waitFrames);
             }
 
         }
